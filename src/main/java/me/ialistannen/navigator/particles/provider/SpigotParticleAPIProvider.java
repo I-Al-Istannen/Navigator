@@ -20,7 +20,10 @@ public class SpigotParticleAPIProvider implements ParticleProvider {
 			return ParticleDisplayResult.PARTICLE_NOT_FOUND;
 		}
 
-		player.spawnParticle(particle, location, 1);
+		player.spawnParticle(particle, location,
+				1,      // count
+				0, 0, 0,  // offset
+				0);     // speed
 		return ParticleDisplayResult.DISPLAYED;
 	}
 }
