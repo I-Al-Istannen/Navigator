@@ -1,0 +1,6 @@
+name: Navigator
+version: ${project.version}
+main: me.ialistannen.navigator.Navigator
+depend: [I_Al_Istannen_Util]
+authors: [I Al Istannen]
+description: Let's you navigate to a set point.

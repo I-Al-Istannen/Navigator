@@ -1,0 +1,100 @@
+# You can use color codes with "&" and then the color char (e.g. "&c" for red)
+
+# The language. A file called "Messages_XX.properties" must exist in the "language" folder
+# where "XX" is what is written below. Must be a language tag (de_DE, de, en, en_US,...)
+# So "Messages_en.properties" is what is used when "en" is specified
+language: en
+
+# The size of the GUI used for "/naviagate gui"
+gui_size: 54
+
+# The delete item in the description gui
+description_gui_item_delete:
+  # The name
+  name: "&4&lDelete Point"
+  # The lore. Add as much lines as you want
+  lore:
+  - "&cDeletes this point"
+  # The material. Look here for a list: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html
+  material: "WOOL"
+  # The durability. Used to color things. May be left out.
+  durability: 14
+
+# The start navigation item
+description_gui_item_navigate:
+  name: "&a&lStart navigation"
+  lore:
+  - "&7Starts the navigation to the selected point"
+  material: "COMPASS"
+  durability: 0
+
+# The back item
+description_gui_item_back:
+  name: "&c&lBack"
+  lore:
+  - "&7Goes back"
+  material: "BARRIER"
+  durability: 0
+
+# The Placeholders
+description_gui_item_placeholder:
+  name: " "
+  lore:
+  - " "
+  material: "STAINED_GLASS_PANE"
+  durability: 15
+
+
+# ==== PARTICLES ====
+
+# The end marker.
+particle_end_marker:
+  # The name of the end marker. Valid are "Square", "Circle" and "Spehere"
+  name: "Square"
+  # This is specific for the square.
+  side_length: 2.0
+  # The distance between particles
+  granularity: 0.2
+  # The Particle. it depends on your minecraft version.
+  # 1.9 and higher: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Particle.html
+  # 1.8 and lower : https://github.com/DarkBlade12/ParticleEffect/blob/master/src/main/java/com/darkblade12/particleeffect/ParticleEffect.java
+  #                 Look for the things like "EXPLOSION_NORMAL", "EXPLOSION_LARGE" down to "MOB_APPEARANCE"
+  #                 Every particle with this behind it won't work: "ParticleProperty.REQUIRES_DATA".
+  particle: "FLAME"
+
+
+# ==== ALTERNATE END MARKERS ====
+# Just comment the above and uncomment what you want down there. Or copy the needed data.
+
+# === CIRCLE ===
+#particle_end_marker:
+  # The name of the end marker. Valid are "Square", "Circle" and "Spehere"
+#  name: "Circle"
+  # This is specific for the circle.
+#  radius: 2.0
+  # The distance between particles
+#  granularity: 0.3
+#  particle: "FLAME"
+
+# === SPHERE ===
+#particle_end_marker:
+  # The name of the end marker. Valid are "Square", "Circle" and "Spehere"
+#  name: "Sphere"
+  # This is specific for the circle.
+#  radius: 1.0
+  # The distance between particles
+#  granularity: 0.5
+#  particle: "FLAME"
+
+
+
+# The particle line
+particle_line:
+  # The name. Currently only "DirectLine", feel free to suggest other ways of displaying the line
+  name: "DirectLine"
+  # The distance from the player after which the particles become visible
+  minDistance: 1.0
+  # The Length of the line in blocks.
+  length: 5.0
+  # The particle. Same as the particle from "particle_end_marker".
+  particle: "CRIT_MAGIC"
